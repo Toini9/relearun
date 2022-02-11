@@ -31,4 +31,9 @@ jobs:
 
       - name: Test de composer
         run: composer -v
-        
+
+      - name: Rename file .env
+        run: mv _.env.exempl .env
+
+      - name: installer le vendor
+        run: composer install
