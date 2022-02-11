@@ -37,3 +37,6 @@ jobs:
 
       - name: installer le vendor
         run: composer install
+
+      - name: creation de ma base de donnes
+        run: php bin/console doctrine:database:create
