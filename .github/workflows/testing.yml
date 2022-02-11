@@ -40,3 +40,9 @@ jobs:
 
       - name: creation de ma base de donnes
         run: php bin/console doctrine:database:create
+
+      - name: creation du fichier migration SQL
+        run: php bin/console make:mgration
+
+      - name: Execution de script SQL
+        run: php bin/console -n doctrine:migrations:migrate
